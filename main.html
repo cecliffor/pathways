@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathways Foot & Ankle | Podiatry Clinic</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #1a2a3a;
+    line-height: 1.5;
+  }
+
+  /* Header & Navigation - taller for logo */
+  .header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #1a3a5c;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: #4c9a6f;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a3a5c;
+  }
+
+  .main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 70vh;
+  }
+
+  .page {
+    display: none;
+  }
+
+  .page.active-page {
+    display: block;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: #4c9a6f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #1e4a3b;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #e8f5ef 0%, #d4e8dd 100%);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #1e4a3b;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #2c4a6e;
+  }
+
+  /* Home Page Benefit Grid */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    height: 100%;
+  }
+
+  .benefit-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .benefit-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-icon img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1e4a3b;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333333;
+    text-align: left;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background-color: #e8f5ef;
+    border-left: 5px solid #4c9a6f;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1e4a3b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .callout-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Conditions Grid */
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .condition-category {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+    height: 100%;
+  }
+
+  .condition-category:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .condition-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .condition-icon img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+
+  .condition-category h3 {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1e4a3b;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .condition-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .condition-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .condition-list li {
+    background-color: #f0f4f8;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #1a3a5c;
+  }
+
+  /* About Page */
+  .about-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .about-text {
+    flex: 2;
+  }
+
+  .about-image {
+    flex: 1;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Expandable Sections */
+  .expandable-section {
+    margin-top: 0.5rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+  }
+
+  .expandable-section:first-of-type {
+    margin-top: 1rem;
+  }
+
+  .expandable-header {
+    background-color: #f8fafc;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1e4a3b;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .expandable-header:hover {
+    background-color: #eef3f0;
+  }
+
+  .expandable-header .header-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+  }
+
+  .expandable-header .header-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .expandable-header .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+  }
+
+  .expandable-header.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1.5rem;
+  }
+
+  .expandable-content.open {
+    max-height: 2000px;
+    padding: 1.5rem;
+    transition: max-height 0.5s ease-in;
+  }
+
+  /* Credentials Grid */
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .credential-category h3 {
+    color: #1e4a3b;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #4c9a6f;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+  }
+
+  .credential-category ul {
+    margin-top: 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .credential-category li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Publications List */
+  .publications-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .publications-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Medical Services */
+  .services-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .services-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1e4a3b;
+  }
+
+  .services-intro {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    color: #2c4a6e;
+    font-size: 1.05rem;
+    text-align: left;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+    height: 100%;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .service-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-icon img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+
+  .service-title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1e4a3b;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333333;
+    text-align: left;
+  }
+
+  /* Appointments Page */
+  .phone-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1e4a3b;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+
+  .footer-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    .nav-container {
+      padding: 1rem;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+
+    .main {
+      padding: 1rem;
+    }
+
+    .about-container {
+      flex-direction: column;
+    }
+
+    .about-image img {
+      max-width: 200px;
+      margin-top: 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+    }
+
+    .credentials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .conditions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Tablet View */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav-container">
+    <a href="#" class="logo" id="homeLinkNav">
+      <img src="./photos/logo.png" alt="Pathways Foot & Ankle">
+    </a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="about">Meet the Doctor</a></li>
+      <li><a href="#" data-page="conditions">Conditions Treated</a></li>
+      <li><a href="#" data-page="services">Medical Services</a></li>
+      <li><a href="#" data-page="appointments">Appointments</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main">
+  <!-- HOME PAGE -->
+  <div id="home" class="page active-page">
+    <div class="hero">
+      <h1>Expert Foot & Ankle Care in Oregon City</h1>
+      <p>From ingrown toenails to sports injuries and surgery — we help you step comfortably again.</p>
+      <a href="#" class="btn" data-page="appointments">Schedule an Appointment</a>
+    </div>
+
+    <h2 style="text-align: center; margin-bottom: 1rem;">Why Choose Pathways Foot & Ankle?</h2>
+    <!-- NEW CALLOUT BOX - Functional Medicine & Direct Care -->
+    <div class="callout-box">
+      <p>
+        <strong>Two things set us apart:</strong> We find the root cause of your foot problem with Functional Medicine — and we never let insurance companies dictate your care. Just transparent, affordable, patient-first treatment.
+      </p>
+    </div>
+    <div class="benefits-grid">
+      <!-- Functional Medicine -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1F9E0.svg" alt="Brain icon"></div>
+        <h3>Functional Medicine</h3>
+        <p>We look beyond the foot to find the root cause of your problem — examining nutrition, hormones, inflammation, and lifestyle. Instead of just treating symptoms, we restore whole-body balance to prevent future issues.</p>
+      </div>
+      <!-- Direct Care Model -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1F4A1.svg" alt="Light bulb icon"></div>
+        <h3>Direct Care = Better Care</h3>
+        <p>No insurance middlemen. No surprise bills. Just transparent, affordable pricing and longer appointments. Treatment decisions are made between you and your doctor — not by an insurance company.</p>
+      </div>
+      <!-- Same-Day Access -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1F4C5.svg" alt="Calendar icon"></div>
+        <h3>Same-Day Visits</h3>
+        <p>No referral needed. Same-day and next-day appointments are usually available. You get direct access to your provider without gatekeepers or prior authorizations.</p>
+      </div>
+      <!-- Conservative First -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1FA79.svg" alt="Bandage icon"></div>
+        <h3>Conservative First</h3>
+        <p>We start with non-surgical options whenever possible — from orthotics and physical therapy to regenerative medicine and laser therapy. Surgery is always a last resort.</p>
+      </div>
+      <!-- Advanced In-Office Care -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1F3E5.svg" alt="Hospital icon"></div>
+        <h3>Advanced In-Office Care</h3>
+        <p>X-ray, ultrasound, laser therapy, shockwave therapy, and minor procedures — all in one place. No waiting for outside referrals or separate appointments.</p>
+      </div>
+      <!-- Transparent Pricing -->
+      <div class="benefit-card">
+        <div class="benefit-icon"><img src="icons/1F4B0.svg" alt="Money bag icon"></div>
+        <h3>No Surprise Bills</h3>
+        <p>You know exactly what you pay before you receive care. HSA/FSA eligible. Lower overall costs without the overhead of insurance billing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT PAGE - Meet the Doctor -->
+  <div id="about" class="page">
+    <h1>Craig Clifford, DPM, MHA, FACFAS, FACPM</h1>
+    <div class="about-container">
+      <div class="about-text">
+        <p>Dr. Craig Clifford completed his podiatric medical and surgical residency training at the Franciscan Foot and Ankle Institute in Federal Way, Washington, where he later served as Director of Research and then Director of Residency Training. During his teaching tenure, he received multiple honors including Clinician of the Year, Instructor of the Year, and the Outstanding Teaching Award. In 2020, he was named the Washington State Podiatric Medical Association Physician of the Year.</p>
+        <br>
+        <p>After more than a decade of performing, teaching, and developing surgical techniques, Dr. Clifford recognized that most foot and ankle surgery can be avoided with appropriate conservative care. In 2022, he left his successful high volume surgical practice to focus on expanding patient access to cutting-edge nonsurgical treatment—though he continues to perform surgery when necessary, utilizing the latest advancements in minimally invasive techniques. Dr. Clifford understands that there is no "one size fits all" solution in medicine, and every patient requires an individualized, evidence-based approach, not a generic treatment plan.</p>
+        <br>
+        <p>Dr. Clifford is board certified by the American Board of Foot and Ankle Surgery and the American Board of Podiatric Medicine. He has previously served on the Board of Directors of the International Foot and Ankle Foundation and has held editorial and peer review roles for multiple medical journals. He was also actively involved for over a decade with the Yucatan Children's Project, where he volunteered his time and skills to perform deformity correction surgeries for underserved children in Mexico.</p>
+
+        <div class="expandable-section" id="credentialsSection">
+          <div class="expandable-header" id="credentialsHeader">
+            <div class="header-title">
+              <img src="icons/1F4DC.svg" alt="Scroll icon" class="header-icon"> <span>Credentials</span>
+            </div>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="expandable-content" id="credentialsContent">
+            <div class="credentials-grid">
+              <div class="credential-category">
+                <h3>Education</h3>
+                <ul>
+                  <li>Podiatric Medicine & Surgery Residency - Franciscan Foot & Ankle Institute</li>
+                  <li>Doctor of Podiatric Medicine - Des Moines University College of Podiatric Medicine and Surgery</li>
+                  <li>Master of Healthcare Administration - Des Moines University College of Health Sciences</li>
+                </ul>
+              </div>
+              <div class="credential-category">
+                <h3>Affiliations</h3>
+                <ul>
+                  <li>Fellow - American College of Podiatric Medicine</li>
+                  <li>Fellow - American College of Foot and Ankle Surgeons</li>
+                </ul>
+              </div>
+              <div class="credential-category">
+                <h3>Certifications</h3>
+                <ul>
+                  <li>Board Certified in Foot Surgery, Reconstructive Rearfoot, and Ankle Surgery - American Board of Foot and Ankle Surgery</li>
+                  <li>Board Certified in Podiatric Medicine - American Board of Podiatric Medicine</li>
+                </ul>
+              </div>
+              <div class="credential-category">
+                <h3>Awards</h3>
+                <ul>
+                  <li>Clinician of the Year · 2022 · Virginia Mason Franciscan Health</li>
+                  <li>Clinician of the Year · 2021 · Virginia Mason Franciscan Health</li>
+                  <li>Outstanding Teaching Award · 2020 · International Foot & Ankle Foundation</li>
+                  <li>Physician of the Year · 2020 · Washington State Podiatric Medical Association</li>
+                  <li>Instructor of the Year · 2019 · Virginia Mason Franciscan Health</li>
+                  <li>Clinician of the Year · 2018 · Virginia Mason Franciscan Health</li>
+                  <li>Clinician of the Year · 2017 · Virginia Mason Franciscan Health</li>
+                  <li>Clinician of the Year · 2015 · Virginia Mason Franciscan Health</li>
+                  <li>Outstanding Teaching Award · 2015 · International Foot & Ankle Foundation</li>
+                  <li>Clinician of the Year · 2014 · Virginia Mason Franciscan Health</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="expandable-section" id="publicationsSection">
+          <div class="expandable-header" id="publicationsHeader">
+            <div class="header-title">
+              <img src="icons/1F4DA.svg" alt="Books icon" class="header-icon"> <span>Publications and Research</span>
+            </div>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="expandable-content" id="publicationsContent">
+            <ul class="publications-list">
+              <li>Drogomiretskiy O, Rockhill S, Reber T, Hutchinson B, Clifford C. Distraction osteogenesis for treatment of iatrogenic shortening of the first ray. J Int Foot Ankle. 1(9): 2022.</li>
+              <li>Drogomiretskiy O, Hjelm L, Millonig K, Brown J, Clifford C, Chappell TM. Initial surgical outcomes of two modified minimally invasive repair techniques for acute achilles tendon rupture. The Journal of Foot & Ankle Surgery: 2022;2(4):2667-3967.</li>
+              <li>Drogomiretskiy O, Yearian C, Clifford C. First metatarsophalangeal joint arthrodesis with dual plating: A clinical retrospective review. Foot & Ankle Surgery: Techniques, Reports & Cases. S2667-3967(22)00093-3, 2022.</li>
+              <li>Drogomiretskiy O, Yearian C, Clifford C. Minimally invasive surgical correction for midfoot charcot arthropathy: A clinical retrospective review. ACFAS 2022 Annual Scientific Conference.</li>
+              <li>Drogomiretskiy O, Millonig K, Yearian C, Clifford C. First metatarsophalangeal joint arthrodesis with dual plating: A clinical retrospective review. ACFAS 2020 Annual Scientific Conference.</li>
+              <li>Reber T, Hjelm L, Schweitzer M, Clifford C. Distraction osteogenesis for treatment of a shortened first metatarsal after failed first metatarsophalangeal joint arthroplasty. Foot Ankle Online J. 13(3): 9, 2020.</li>
+              <li>Oexeman S, Millonig K, Ward K, Clifford C. Fibula Osteotomy with interpositional bone graft and intramedullary rod fixation for malunited fibula. ACFAS 2019 Annual Scientific Conference.</li>
+              <li>Millonig K, Oexeman S, Clifford C. Percutaneous repair of Achilles tendon rupture with calcaneal anchors. ACFAS 2019 Annual Scientific Conference.</li>
+              <li>Kamery A, Clifford C. Intramedullary fixation of distal fibular fractures in a geriatric patient: A case report. Foot Ankle Online J. 11(3): 1, 2018.</li>
+              <li>Clifford C, Oexeman S, Millonig K. When hammertoe surgery fails. Podiatry Today. 31(10): 2018. 28-34.</li>
+              <li>Samchukov ML, Clifford CE, McCann KM, Cherkashin AM, Hutchinson B, Pierce WA. Biomechanical considerations in foot and ankle circular external fixation: Maintenance of wire tension. Clin Podiatr Med Surg. 2018 Oct;35(4):443-455.</li>
+              <li>Oexeman S, Schweitzer M, Clifford C. Staged treatment of a plantar midfoot ulceration with use of a hemisoleus muscle flap, application of external fixation and split thickness skin graft. ACFAS 2018 Annual Scientific Conference.</li>
+              <li>Kamery A, Ward K, Kimawi A, Clifford C. Intramedullary fixation of distal fibular fractures in the geriatric patient: A case report. ACFAS 2017 Annual Scientific Conference.</li>
+              <li>Chappell T, Clifford C, Hutchinson B, Dockery G. Our unique position to serve those in need. Podiatry Management. Oct 2016.</li>
+              <li>Clifford C. Hammertoe Fixation And Cost-Effectiveness: What Are The Best Options? Podiatry Today. 29(1): 2016. 40-46.</li>
+              <li>Rossiter C, Clifford C. Abductor muscle flap for chronic wound healing. ACFAS 2016 Annual Scientific Conference.</li>
+              <li>Ebert C, Clifford C, Chappell T. The relationship of first metatarsal frontal plane position and first metatarsophalangeal joint range of motion with simulated first tarsometatarsal joint arthrodesis: A biomechanical investigation. ACFAS 2016 Scientific Conference.</li>
+              <li>Clifford C, Berg S, Mccann K, Hutchinson B. A biomechanical comparison of internal fixation techniques for ankle arthrodesis. J Foot Ankle Surg. 2015;54(2):188-91.</li>
+              <li>Wilder M, Ebert C, Clifford C. Diagnostic work-up of early rheumatoid arthritis in the foot and ankle patient. Foot Ankle Online J. 7(1): 6, 2014.</li>
+              <li>Clifford C. Understand the biomechanics of equinus. Podiatry Today. 27(9): 2014. 38-44.</li>
+              <li>Rodriguez E, Hutchinson B, Clifford C, McCann K. Arthrodiatasis in the Treatment of Ankle Arthritis: A Case Series. Foot Ankle Online J. 5(7): 2, 2012.</li>
+              <li>Clifford C, McCann K, Bouche R. Free-graft deltoid ligament reconstruction: A biomechanical study. ACFAS 2012 Scientific Conference.</li>
+              <li>Clifford C, McCann K. Technique for single-graft lateral ankle stabilization: A cadaveric biomechanical study. Foot Ankle Online J. 4(7): 3, 2011.</li>
+              <li>Clifford C, McCann K, Salton H. Technique for single-graft lateral ankle stabilization: A cadaveric biomechanical study. ACFAS 2011 Scientific Conference.</li>
+              <li>McCann K, Clifford C, Salton H. Aneurysmal bone cyst presenting in soft tissue: A case report. Foot Ankle Online J. 4(6): 1, 2011.</li>
+              <li>McCann K, Clifford C, Salton H. Aneurysmal bone cyst presenting in soft tissue: a case report. ACFAS 2011 Scientific Conference.</li>
+              <li>McCann K, Clifford C, Leonheart E, Salton H. Case of pseudoarthrosis due to foreign body reaction to bone wax. ACFAS 2010 Scientific Conference.</li>
+            </ul>
+          </div>
+        </div>
+
+        <br>
+        <p><img src="icons/E242.svg" alt="Location icon" style="width:18px; height:18px; vertical-align:middle; margin-right:0.25rem;"> <strong>Location:</strong> 365 Warner Milne Rd, Suite 203</p>
+        <p><img src="icons/1F4DE.svg" alt="Phone icon" style="width:18px; height:18px; vertical-align:middle; margin-right:0.25rem;"> <strong>Phone:</strong> (XXX) XXX-XXXX</p>
+      </div>
+      <div class="about-image">
+        <img src="photos/1F468-200D-2695-FE0F.svg" alt="Dr. Craig Clifford, podiatrist">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONDITIONS TREATED PAGE -->
+  <div id="conditions" class="page">
+    <h1 style="text-align: center;">Conditions Treated</h1>
+    
+    <div class="callout-box">
+      <p>
+        <img src="icons/1F4DE.svg" alt="Phone icon" class="callout-icon">
+        <strong>Not sure if we treat your condition? Call and ask!</strong> — Same day and next day appointments are usually available, and most foot and ankle problems can be helped without surgery.
+      </p>
+    </div>
+    
+    <p>Your feet are the foundation of everything you do. When something feels off — whether it's a sharp pain, a strange lump, a stubborn skin issue, or a condition linked to another health problem — we're here to help. At Pathways Foot & Ankle, we diagnose and treat the full range of foot and ankle conditions, from common problems like ingrown toenails and plantar fasciitis to complex deformities and systemic diseases. No referral is needed, and most treatments start conservatively, only moving to surgery when truly necessary.</p>
+    
+    <div class="conditions-grid">
+      <div class="condition-category">
+        <div class="condition-icon"><img src="icons/26A1.svg" alt="Lightning icon"></div>
+        <h3>Acute and Chronic Foot and Ankle Pain</h3>
+        <div class="condition-description">Foot and ankle pain can be sudden from an injury or develop slowly over time. Whether you're dealing with tendonitis, fractures, nerve pain, or joint inflammation, we find the source and create a treatment plan to get you moving again.</div>
+        <ul class="condition-list">
+          <li>Achilles Tendinitis</li><li>Ankle Instability</li><li>Ankle Arthritis</li><li>Arthritis</li>
+          <li>Big Toe Joint Pain</li><li>Bunions</li><li>Fractures</li><li>Cysts</li>
+          <li>Tumors</li><li>Bone Spurs</li><li>Neuromas and Nerve Pain</li><li>Tarsal Tunnel Syndrome</li>
+          <li>Joint Pain and Inflammation</li><li>Sports Injuries</li><li>Sprains and Ligament Tears</li>
+          <li>Heel Pain</li><li>Plantar Fasciitis</li><li>Posterior Tibial Tendinitis</li>
+          <li>Stress Fractures</li><li>Tendonitis</li>
+        </ul>
+      </div>
+      
+      <div class="condition-category">
+        <div class="condition-icon"><img src="icons/1F9B6.svg" alt="Foot icon"></div>
+        <h3>Common Foot Deformities</h3>
+        <div class="condition-description">Structural problems like bunions, hammertoes, and flat feet can affect your balance, gait, and overall comfort. We offer both non-surgical and surgical options to correct deformities and improve how your feet function.</div>
+        <ul class="condition-list">
+          <li>Bunions</li><li>Hammertoes</li><li>Crossover Toes</li><li>Flat Feet</li>
+          <li>Clubfoot Deformity</li><li>Metatarsus Adductus</li><li>Tarsal Coalitions</li>
+          <li>Gait Abnormalities</li><li>Balance Disturbances</li>
+        </ul>
+      </div>
+      
+      <div class="condition-category">
+        <div class="condition-icon"><img src="icons/1F485.svg" alt="Nail polish icon"></div>
+        <h3>Skin and Nail Conditions of the Feet</h3>
+        <div class="condition-description">From corns and calluses to ingrown toenails, fungus, and even skin cancer, your feet are vulnerable to many surface-level conditions. We provide medical and minor surgical treatments to keep the skin and nails of your feet healthy.</div>
+        <ul class="condition-list">
+          <li>Corns</li><li>Calluses</li><li>Deformed Toenails</li><li>Fungus</li>
+          <li>Ingrown Toenails</li><li>Rashes</li><li>Burns</li><li>Skin Conditions</li>
+          <li>Skin Lesions</li><li>Skin Cancer of the Foot</li><li>Moles</li>
+          <li>Toenail Fungus</li><li>Ulcers / Wounds</li><li>Warts</li>
+        </ul>
+      </div>
+      
+      <div class="condition-category">
+        <div class="condition-icon"><img src="icons/2764.svg" alt="Heart icon"></div>
+        <h3>Systemic Conditions Affecting the Feet</h3>
+        <div class="condition-description">Diseases that affect your entire body — such as diabetes, arthritis, and vascular disease — often cause serious foot complications first. We help manage these risks to prevent ulcers, nerve damage, and loss of mobility.</div>
+        <ul class="condition-list">
+          <li>Diabetes</li><li>Gout</li><li>Arthritis</li><li>Auto-immune Diseases</li>
+          <li>Parkinson's Diseases</li><li>Peripheral Vascular Disease</li>
+          <li>Peripheral Neuropathy</li><li>Stroke</li><li>Raynaud's Disease</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDICAL SERVICES PAGE -->
+  <div id="services" class="page">
+    <div class="services-section">
+      <h2>Medical Services</h2>
+      <div class="services-intro">
+        <p>At Pathways Foot & Ankle, we offer a full range of diagnostic and treatment services — many available right in our office. From advanced imaging to non-surgical therapies and minimally invasive procedures, we tailor every treatment to your condition and lifestyle.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1FA7B.svg" alt="X-Ray icon"></div>
+          <div class="service-title">In-Office X-Rays</div>
+          <div class="service-description">Get answers fast. Our digital X-ray system allows us to see fractures, bone spurs, arthritis, and alignment issues immediately during your visit — no referral or separate appointment needed.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F4E1.svg" alt="Ultrasound icon"></div>
+          <div class="service-title">Diagnostic Ultrasound</div>
+          <div class="service-description">This painless, radiation-free imaging lets us examine soft tissues like tendons, ligaments, and nerves in real time. It's especially helpful for diagnosing plantar fasciitis, tendon tears, neuromas, and cysts.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F45F.svg" alt="Shoe icon"></div>
+          <div class="service-title">Biomechanical Exam</div>
+          <div class="service-description">We analyze how you stand, walk, and run to identify abnormal motion patterns that lead to pain or injury. This exam guides our recommendations for orthotics, physical therapy, and shoe gear.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F9E0.svg" alt="Brain icon"></div>
+          <div class="service-title">Functional Medicine Workup and Treatment</div>
+          <div class="service-description">Foot problems often stem from whole-body issues like inflammation, hormone imbalances, or nutritional deficiencies. We dig deeper with functional medicine testing to treat the root cause — not just the symptom.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F52A.svg" alt="Knife icon"></div>
+          <div class="service-title">Toenail Removal</div>
+          <div class="service-description">For chronic ingrown, thickened, or painful nails, we offer safe in-office nail removal. The procedure is quick, numbed completely, and can be made permanent if the nail edge keeps growing back.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F489.svg" alt="Syringe icon"></div>
+          <div class="service-title">Cortisone Injections</div>
+          <div class="service-description">A powerful anti-inflammatory shot that reduces swelling and pain from conditions like arthritis, tendinitis, and plantar fasciitis. Relief often begins within days and can last for weeks or months.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F9EC.svg" alt="DNA icon"></div>
+          <div class="service-title">Regenerative Medicine Injections</div>
+          <div class="service-description">We use your body's own healing abilities to repair damaged tissues. Options include platelet-rich plasma (PRP) and amniotic injections — ideal for chronic tendonitis, arthritis, and ligament injuries.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F463.svg" alt="Footprints icon"></div>
+          <div class="service-title">Custom Orthotics</div>
+          <div class="service-description">Prescription devices made specifically for your feet. Unlike over-the-counter inserts, custom orthotics correct your unique biomechanics, relieve pressure points, and prevent reinjury.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/26A1.svg" alt="Lightning icon"></div>
+          <div class="service-title">Shockwave Therapy</div>
+          <div class="service-description">A non-invasive treatment that uses high-energy sound waves to stimulate healing in chronic conditions like plantar fasciitis and Achilles tendinitis. No needles, no downtime — typically 3 sessions.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F489.svg" alt="Syringe icon"></div>
+          <div class="service-title">Prolotherapy</div>
+          <div class="service-description">Prolotherapy (proliferative therapy) uses a small amount of an irritant solution — typically dextrose — injected into a weakened ligament or tendon. This triggers a natural healing response, strengthening the tissue and reducing chronic pain. It's especially effective for ankle instability, plantar fasciitis, and unresolved sprains.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1F33F.svg" alt="Herb icon"></div>
+          <div class="service-title">Homeopathic Injection Therapy</div>
+          <div class="service-description">A gentle, low-concentration injection that combines diluted homeopathic remedies with a local anesthetic. This therapy is designed to reduce inflammation, break up scar tissue, and relieve nerve pain without the side effects of stronger medications. It's often used for neuromas, arthritic joints, and chronic tendinitis.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/2702.svg" alt="Scissors icon"></div>
+          <div class="service-title">Routine Nail and Callus Care</div>
+          <div class="service-description">Not just a trim — we medically assess and treat thick, deformed, or fungal nails along with painful, hardened skin. Using sterile instruments, we reduce calluses to prevent ulcers and carefully debride nails to restore comfort and mobility. Ideal for diabetics, seniors, or anyone who struggles to care for their own feet.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/2728.svg" alt="Sparkles icon"></div>
+          <div class="service-title">Laser Therapy for Pain & Inflammation</div>
+          <div class="service-description">Medical grade lasers use focused, painless light energy to penetrate deep into tissues without heat or discomfort. For acute and chronic pain, it reduces inflammation, stimulates cell repair, and improves blood flow — effectively treating arthritis, tendonitis, neuropathy, and sports injuries. Each session takes only a few minutes, and most patients notice improvement after 3–6 treatments.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/2600.svg" alt="Sun icon"></div>
+          <div class="service-title">Laser Therapy for Toenail Fungus</div>
+          <div class="service-description">Specialized laser energy safely heats and destroys toenail fungus without damaging the surrounding skin or nail. The treatment is painless, requires no needles or anesthesia, and has no downtime. Most patients see clearer, healthier nail growth after 1–3 sessions, with visible improvement over several months as the nail grows out.</div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon"><img src="icons/1FA79.svg" alt="Bandage icon"></div>
+          <div class="service-title">Minimally Invasive Surgery</div>
+          <div class="service-description">When surgery is needed, we use small incisions (often less than 1 cm) to correct bunions, hammertoes, neuromas, and more. Less pain, faster recovery, and no large scars.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPOINTMENTS PAGE -->
+  <div id="appointments" class="page">
+    <h1 style="text-align: center;">Request an Appointment</h1>
+    <p style="text-align: center;">Call us or fill out the form below. We'll confirm within 24 hours.</p>
+    <br>
+    <p style="text-align: center;">
+      <img src="icons/1F4DE.svg" alt="Phone icon" class="phone-icon"> 
+      <strong>Phone:</strong> (XXX) XXX-XXXX
+    </p>
+    <br>
+    <form>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" style="width:100%; padding:0.5rem; margin-top:0.25rem;"><br><br>
+      
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" style="width:100%; padding:0.5rem; margin-top:0.25rem;"><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" style="width:100%; padding:0.5rem; margin-top:0.25rem;"><br><br>
+      
+      <label for="reason">Reason for Visit:</label><br>
+      <textarea id="reason" rows="3" style="width:100%; padding:0.5rem; margin-top:0.25rem;"></textarea><br><br>
+      
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+    <p style="margin-top:1rem; font-size:0.85rem;">*We will call you to confirm. Do not send urgent medical requests.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Pathways Foot & Ankle | Podiatry Clinic | All Rights Reserved</p>
+  <p><img src="icons/1F4DE.svg" alt="Phone icon" class="footer-icon"> (XXX) XXX-XXXX | <img src="icons/E242.svg" alt="Location icon" class="footer-icon"> [Your Address]</p>
+</div>
+
+<script>
+  // Page navigation - scroll to top when changing pages
+  const pages = {
+    home: document.getElementById('home'),
+    about: document.getElementById('about'),
+    conditions: document.getElementById('conditions'),
+    services: document.getElementById('services'),
+    appointments: document.getElementById('appointments')
+  };
+
+  function showPage(pageId) {
+    // Hide all pages
+    Object.values(pages).forEach(page => {
+      page.classList.remove('active-page');
+    });
+    // Show selected page
+    pages[pageId].classList.add('active-page');
+    window.location.hash = pageId;
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const pageId = link.getAttribute('data-page');
+      showPage(pageId);
+      document.getElementById('navLinks').classList.remove('show');
+    });
+  });
+
+  document.getElementById('homeLinkNav').addEventListener('click', (e) => {
+    e.preventDefault();
+    showPage('home');
+  });
+
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('show');
+  });
+
+  // Handle initial page load from URL hash
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    if (pages[hash]) {
+      pages[hash].classList.add('active-page');
+      pages[hash].classList.remove('active-page');
+      pages[hash].classList.add('active-page');
+    } else {
+      pages.home.classList.add('active-page');
+    }
+  } else {
+    pages.home.classList.add('active-page');
+  }
+
+  // Expandable sections functionality (only one open at a time)
+  const credentialsHeader = document.getElementById('credentialsHeader');
+  const credentialsContent = document.getElementById('credentialsContent');
+  const publicationsHeader = document.getElementById('publicationsHeader');
+  const publicationsContent = document.getElementById('publicationsContent');
+
+  if (credentialsHeader && publicationsHeader) {
+    function closeAllSections() {
+      credentialsHeader.classList.remove('open');
+      credentialsContent.classList.remove('open');
+      publicationsHeader.classList.remove('open');
+      publicationsContent.classList.remove('open');
+    }
+
+    credentialsHeader.addEventListener('click', () => {
+      const isOpen = credentialsContent.classList.contains('open');
+      closeAllSections();
+      if (!isOpen) {
+        credentialsHeader.classList.add('open');
+        credentialsContent.classList.add('open');
+      }
+    });
+
+    publicationsHeader.addEventListener('click', () => {
+      const isOpen = publicationsContent.classList.contains('open');
+      closeAllSections();
+      if (!isOpen) {
+        publicationsHeader.classList.add('open');
+        publicationsContent.classList.add('open');
+      }
+    });
+  }
+
+  // Ensure any remaining hash handling doesn't cause double-load
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    if (pages[hash]) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }, 10);
+    }
+  }
+</script>
+
+</body>
+</html>
