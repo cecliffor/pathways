@@ -3,11 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patient Handout: Heel Pain | Pathways Foot & Ankle</title>
+  
+  <!-- Primary SEO -->
+  <title>Heel Pain Treatment | Plantar Fasciitis & Achilles Tendinitis | Pathways Foot & Ankle</title>
+  <meta name="description" content="Learn about the causes and treatments for heel pain, including plantar fasciitis, Achilles tendinitis, and heel spurs. Non-surgical options available in Oregon City.">
+  <meta name="keywords" content="heel pain treatment, plantar fasciitis Oregon City, Achilles tendinitis, heel spurs, foot doctor Oregon City, heel pain relief, shockwave therapy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pathwaysfootankle.com/handouts/heel-pain.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Heel Pain Treatment | Plantar Fasciitis & Achilles Tendinitis | Pathways Foot & Ankle">
+  <meta property="og:description" content="Patient information guide on heel pain — causes, treatments, and when to see a specialist. Non-surgical options available.">
+  <meta property="og:image" content="https://pathwaysfootankle.com/img/PATHWAYS_FINAL.png">
+  <meta property="og:url" content="https://pathwaysfootankle.com/handouts/heel-pain.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Heel Pain Treatment | Pathways Foot & Ankle">
+  <meta name="twitter:description" content="Patient information guide on heel pain — causes, treatments, and when to see a specialist.">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome 6 (Free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     * {
       margin: 0;
@@ -23,7 +44,6 @@
       padding: 40px 20px;
     }
 
-    /* Print-specific styles */
     @media print {
       body {
         background-color: white;
@@ -36,19 +56,7 @@
         border-radius: 0;
       }
       .no-print {
-        display: none;
-      }
-      .print-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 10px;
-        color: #999;
-        border-top: 1px solid #e0ecd9;
-        padding: 8px 0;
-        background: white;
+        display: none !important;
       }
     }
 
@@ -61,7 +69,6 @@
       overflow: hidden;
     }
 
-    /* Header */
     .handout-header {
       background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
       padding: 32px 40px;
@@ -89,61 +96,50 @@
       height: 100px;
       width: auto;
     }
-    .handout-logo .logo-fallback {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
+
+    .return-home-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      background-color: #438950;
       color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+    .return-home-btn:hover {
+      background-color: #083104;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .return-home-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+    }
+    @media print {
+      .return-home-btn {
+        display: none !important;
+      }
     }
 
-/* Floating Return to Homepage Button */
-.return-home-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 52px;
-  height: 52px;
-  background-color: #438950;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  text-decoration: none;
-}
-.return-home-btn:hover {
-  background-color: #083104;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  color: white;
-}
-@media (max-width: 640px) {
-  .return-home-btn {
-    bottom: 20px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-    font-size: 1.2rem;
-  }
-}
-@media print {
-  .return-home-btn {
-    display: none !important;
-  }
-}
-
-    /* Content */
     .handout-content {
       padding: 40px;
     }
 
-    /* Section styling */
     .section {
       margin-bottom: 32px;
     }
@@ -171,15 +167,12 @@
       margin: 24px 0;
       border-left: 4px solid #438950;
     }
-
     .info-box h3 {
       font-family: 'DM Sans', sans-serif;
       font-size: 1.1rem;
       margin-bottom: 12px;
-      color: #083104;
     }
 
-    /* Simple bullet list with check-circle */
     .bullet-list {
       list-style: none;
       padding-left: 0;
@@ -197,7 +190,6 @@
       font-size: 0.9rem;
     }
 
-    /* Two-column layout */
     .two-col {
       display: flex;
       flex-wrap: wrap;
@@ -209,12 +201,6 @@
       min-width: 200px;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #e0ecd9;
-      margin: 24px 0;
-    }
-
     .callout {
       background: #083104;
       color: white;
@@ -222,9 +208,6 @@
       padding: 24px;
       text-align: center;
       margin: 32px 0;
-    }
-    .callout p {
-      margin-bottom: 12px;
     }
     .callout a {
       color: #FFFFFF;
@@ -239,6 +222,21 @@
       color: #8a9c7a;
       padding: 16px 40px 24px;
       border-top: 1px solid #e0ecd9;
+    }
+
+    .back-to-site {
+      display: inline-block;
+      background: #438950;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .back-to-site:hover {
+      background: #083104;
     }
 
     @media (max-width: 640px) {
@@ -261,22 +259,18 @@
 <body>
 
 <div class="handout-container">
-  <!-- Header -->
   <div class="handout-header">
     <div class="handout-title">
       <h1>Understanding Heel Pain</h1>
       <p>Patient Information Guide | Pathways Foot & Ankle</p>
     </div>
     <div class="handout-logo">
-      <img src="../img/PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
-      <div class="logo-fallback" style="display: none;">Pathways Foot & Ankle</div>
+      <img src="../img/PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle - Heel Pain Specialist Oregon City">
     </div>
   </div>
 
-  <!-- Content -->
   <div class="handout-content">
     
-    <!-- Introduction -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-foot-print"></i>
@@ -285,7 +279,6 @@
       <p>Heel pain is one of the most common foot complaints we see. It can range from a dull ache to a sharp, stabbing sensation, especially with those first steps in the morning. The good news is that most heel pain resolves with conservative treatment—no surgery required.</p>
     </div>
 
-    <!-- Common Causes -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-stethoscope"></i>
@@ -294,13 +287,13 @@
       <div class="two-col">
         <div class="col">
           <div class="info-box" style="margin-top: 0;">
-            <h3> Plantar Fasciitis</h3>
+            <h3>Plantar Fasciitis</h3>
             <p>Inflammation of the thick band of tissue (plantar fascia) that runs across the bottom of your foot. The most common cause of heel pain.</p>
           </div>
         </div>
         <div class="col">
           <div class="info-box" style="margin-top: 0;">
-            <h3> Achilles Tendinitis</h3>
+            <h3>Achilles Tendinitis</h3>
             <p>Inflammation of the Achilles tendon, connecting your calf muscles to your heel bone. Causes pain at the back of the heel.</p>
           </div>
         </div>
@@ -308,20 +301,19 @@
       <div class="two-col">
         <div class="col">
           <div class="info-box" style="margin-top: 0;">
-            <h3></i> Heel Bursitis</h3>
+            <h3>Heel Bursitis</h3>
             <p>Inflammation of the fluid-filled sac (bursa) at the back of the heel, often from repetitive stress or poorly fitting shoes.</p>
           </div>
         </div>
         <div class="col">
           <div class="info-box" style="margin-top: 0;">
-            <h3></i> Heel Spurs</h3>
+            <h3>Heel Spurs</h3>
             <p>A bony growth on the underside of the heel bone. Often associated with plantar fasciitis but rarely the source of pain itself.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Risk Factors -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-exclamation-triangle"></i>
@@ -337,7 +329,6 @@
       </ul>
     </div>
 
-    <!-- Treatment Options -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-heartbeat"></i>
@@ -364,7 +355,6 @@
       </div>
     </div>
 
-    <!-- When to Seek Care -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-clock"></i>
@@ -379,7 +369,6 @@
       </ul>
     </div>
 
-    <!-- At-Home Care -->
     <div class="info-box">
       <h3><i class="fas fa-hand-holding-heart"></i> At-Home Care Tips</h3>
       <ul class="bullet-list" style="margin-bottom: 0;">
@@ -391,7 +380,6 @@
       </ul>
     </div>
 
-    <!-- What to Expect at Pathways -->
     <div class="section">
       <div class="section-title">
         <i class="fas fa-handshake"></i>
@@ -407,35 +395,42 @@
       </ul>
     </div>
 
-    <!-- Call to Action -->
     <div class="callout">
       <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> <strong>Ready to find relief from your heel pain?</strong></p>
       <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your appointment.</p>
       <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
     </div>
 
-    <!-- Disclaimer -->
     <div class="print-footer">
       <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
       <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+      <p style="margin-top: 12px;">
+        <a href="https://pathwaysfootankle.com" class="back-to-site">
+          <i class="fas fa-arrow-left"></i> Return to Pathways Foot & Ankle
+        </a>
+      </p>
     </div>
   </div>
 </div>
 
+<a href="/index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+
 <script>
-  // Handle logo fallback
   const logoImg = document.querySelector('.handout-logo img');
   if (logoImg) {
     logoImg.onerror = function() {
       this.style.display = 'none';
-      const fallback = this.nextElementSibling;
-      if (fallback) fallback.style.display = 'block';
+      const fallback = document.createElement('div');
+      fallback.className = 'logo-fallback';
+      fallback.textContent = 'Pathways Foot & Ankle';
+      fallback.style.fontFamily = 'DM Sans, sans-serif';
+      fallback.style.fontWeight = '700';
+      fallback.style.fontSize = '1.2rem';
+      this.parentNode.appendChild(fallback);
     };
   }
 </script>
-<!-- Floating Return to Homepage Button -->
-<a href="/index.html" class="return-home-btn" aria-label="Return to Homepage">
-  <i class="fas fa-reply"></i>
-</a>
 </body>
 </html>
